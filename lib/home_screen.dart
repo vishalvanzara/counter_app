@@ -7,7 +7,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-int data = 0;
+int selectedIndex = 0;
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
@@ -16,18 +16,17 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.amber,
-        title: Text('MY APP'),
+        title: const Text('MY APP'),
       ),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.amber,
-          currentIndex: data,
-          onTap: (indexx) {
-            data = indexx;
-            print(data);
+          currentIndex: selectedIndex,
+          onTap: (index) {
+            selectedIndex = index;
             setState(() {});
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: 'setting'),

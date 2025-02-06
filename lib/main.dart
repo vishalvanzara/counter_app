@@ -2,7 +2,7 @@ import 'package:counter_app/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MycounterApp());
+  runApp(const MycounterApp());
 }
 
 class MycounterApp extends StatelessWidget {
@@ -10,7 +10,7 @@ class MycounterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomeScreen(),
     );
   }
